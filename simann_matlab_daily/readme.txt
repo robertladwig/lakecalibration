@@ -6,6 +6,10 @@
 % calibration of hydraulic and physical parameters to fit the vertical temperature profile
 % this script includes option for simulated annealing
 
+%% past versions
+% 1.5   focus on Matlab, uses daily boundary condition to simulate daily vertical water temperature profiles
+% 1.4   focus on Octave implementation, did use daily boundary conditions to simulate hourly vertical water temperature profiles
+
 % structure: calib_start.m calls cmaes.m, which subsequently calls calc_RMSE.m to calculate the fit criteria
 
 
@@ -17,7 +21,7 @@ cd('C:\Users\ladwig\PhD\04_models\GLM\automatic_calb\lakecalibration-master')
 % (3) provide a csv-file titled DATES.csv ranging over simulation period,
 % see line 54
 dates = csvread('DATES.csv',1);
-% (4) provide field data in csv-file measparam.csv, see line 60
+% (4) provide measured field data in csv-file measparam.csv, see line 60
 measParam = csvread('measparam.csv',1);
 % (5) give max. depth of lake and GLM output depths specDeps
 % specDeps refers to the specific GLM output depths of your simulation
@@ -30,4 +34,3 @@ maxDep = 15.43;
 % strmbd_drag) and in the initial guess X0 below
 % (7) modify lines 81-90 in calc_RMSE.m to your specific example (names of
 % output depth files)
-% corresponding to depth = dlmread(output-depth-file, structure)
