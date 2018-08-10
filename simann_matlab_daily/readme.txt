@@ -1,5 +1,6 @@
 %%%% Calibration of a GLM model: mainscript calib_start.m
 % author: Robert Ladwig (IGB Berlin)
+% contact: ladwig@igb-berlin.de
 % version 1.5, 10.08.2018
 % written to work in MATLAB and with small modifications in OCTAVE (csvread)
 % not polished (yet)
@@ -7,7 +8,7 @@
 % this script includes option for simulated annealing
 
 %% past versions
-% 1.5   focus on Matlab, uses daily boundary condition to simulate daily vertical water temperature profiles
+% 1.5   focus on Matlab, uses daily boundary condition to simulate hourly vertical water temperature profiles
 % 1.4   focus on Octave implementation, did use daily boundary conditions to simulate hourly vertical water temperature profiles
 
 % structure: calib_start.m calls cmaes.m, which subsequently calls calc_RMSE.m to calculate the fit criteria
